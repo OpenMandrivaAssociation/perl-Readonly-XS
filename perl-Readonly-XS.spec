@@ -12,7 +12,6 @@ Group:		Development/Perl
 Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Readonly/%{module}-%{version}.tar.bz2
 Url:		http://search.cpan.org/dist/%{module}
 Buildrequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
 
 %description
 The Readonly module (q.v.) is an effective way to create non-modifiable
