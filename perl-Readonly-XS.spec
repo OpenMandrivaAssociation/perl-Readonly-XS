@@ -1,7 +1,7 @@
 %define	module	Readonly-XS
 %define	name	perl-%{module}
 %define version 1.04
-%define release %mkrel 6
+%define release %mkrel 8
 
 Name:		%{name}
 Version:	%{version}
