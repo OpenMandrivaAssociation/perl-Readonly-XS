@@ -1,7 +1,7 @@
 %define	module	Readonly-XS
 %define	name	perl-%{module}
-%define version 1.04
-%define release %mkrel 9
+%define version 1.05
+%define release %mkrel 1
 
 Name:		%{name}
 Version:	%{version}
@@ -9,16 +9,8 @@ Release:	%{release}
 Summary:	Companion module for Readonly.pm, to speed up read-only scalar variables
 License:	GPL or Artistic
 Group:		Development/Perl
-Source:		ftp://ftp.perl.org/pub/CPAN/modules/by-module/Readonly/%{module}-%{version}.tar.bz2
-
-#
-# Patch 1-99: Mandriva patches
-#
-
-# fix building problem due to bad Carp import
-Patch1:     carp-croak.patch
-
 Url:		http://search.cpan.org/dist/%{module}
+Source:     http://www.cpan.org/modules/by-module/Readonly/%{module}-%{version}.tar.gz
 Buildrequires:	perl-devel
 BuildRoot:	%{_tmppath}/%{name}-%{version}
 
@@ -41,7 +33,6 @@ only works for scalars. Arrays and hashes always use the tie interface.
 
 %prep
 %setup -q -n %{module}-%{version}
-%patch1 -p0 -b .carp-croak
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
