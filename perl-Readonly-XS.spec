@@ -1,18 +1,18 @@
-%define	module	Readonly-XS
-%define	name	perl-%{module}
-%define version 1.05
-%define release %mkrel 1
+%define	upstream_name	 Readonly-XS
+%define upstream_version 1.05
 
-Name:		%{name}
-Version:	%{version}
-Release:	%{release}
+Name:       perl-%{upstream_name}
+Version:    %perl_convert_version %{upstream_version}
+Release:    %mkrel 1
+
 Summary:	Companion module for Readonly.pm, to speed up read-only scalar variables
-License:	GPL or Artistic
+License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{module}
-Source:     http://www.cpan.org/modules/by-module/Readonly/%{module}-%{version}.tar.gz
+Url:		http://search.cpan.org/dist/%{upstream_name}
+Source0:    http://www.cpan.org/modules/by-module/Readonly/%{upstream_name}-%{upstream_version}.tar.gz
+
 Buildrequires:	perl-devel
-BuildRoot:	%{_tmppath}/%{name}-%{version}
+BuildRoot:	%{_tmppath}/%{name}-%{version}-%{release}
 
 %description
 The Readonly module (q.v.) is an effective way to create non-modifiable
@@ -32,7 +32,7 @@ Readonly arrays and hashes are not sped up by this, since the SvREADONLY flag
 only works for scalars. Arrays and hashes always use the tie interface.
 
 %prep
-%setup -q -n %{module}-%{version}
+%setup -q -n %{upstream_name}-%{upstream_version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -54,4 +54,3 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Readonly
 %{perl_vendorarch}/auto/Readonly
 %{_mandir}/*/*
-
