@@ -3,7 +3,7 @@
 
 Name:       perl-%{upstream_name}
 Version:    %perl_convert_version %{upstream_version}
-Release:    %mkrel 3
+Release:	4
 
 Summary:	Companion module for Readonly.pm, to speed up read-only scalar variables
 License:	GPL+ or Artistic
