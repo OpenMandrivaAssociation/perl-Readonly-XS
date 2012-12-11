@@ -54,3 +54,53 @@ rm -rf %{buildroot}
 %{perl_vendorarch}/Readonly
 %{perl_vendorarch}/auto/Readonly
 %{_mandir}/*/*
+
+
+%changelog
+* Wed Jan 25 2012 Per Øyvind Karlsen <peroyvind@mandriva.org> 1.50.0-4
++ Revision: 768358
+- svn commit -m mass rebuild of perl extension against perl 5.14.2
+
+* Tue Jul 20 2010 Jérôme Quelin <jquelin@mandriva.org> 1.50.0-3mdv2011.0
++ Revision: 556138
+- rebuild for perl 5.12
+- rebuild for perl 5.12
+
+* Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.50.0-1mdv2010.0
++ Revision: 404353
+- rebuild using %%perl_convert_version
+
+* Wed Feb 25 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.05-1mdv2009.1
++ Revision: 344647
+- new version
+
+* Thu Jul 31 2008 Thierry Vignaud <tv@mandriva.org> 1.04-9mdv2009.0
++ Revision: 258281
+- rebuild
+
+* Thu Jul 24 2008 Thierry Vignaud <tv@mandriva.org> 1.04-8mdv2009.0
++ Revision: 246345
+- rebuild
+
+* Thu Feb 28 2008 Jérôme Quelin <jquelin@mandriva.org> 1.04-6mdv2008.1
++ Revision: 176251
+- applying patch to build against perl 5.10
+
+  + Thierry Vignaud <tv@mandriva.org>
+    - rebuild
+    - kill re-definition of %%buildroot on Pixel's request
+
+  + Olivier Blin <blino@mandriva.org>
+    - restore BuildRoot
+
+* Sat Sep 15 2007 Guillaume Rousse <guillomovitch@mandriva.org> 1.04-3mdv2008.0
++ Revision: 86821
+- rebuild
+
+
+* Thu Aug 31 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.04-2mdv2007.0
+- Rebuild
+
+* Sun Apr 23 2006 Guillaume Rousse <guillomovitch@mandriva.org> 1.04-1mdk
+- first mdk release
+
