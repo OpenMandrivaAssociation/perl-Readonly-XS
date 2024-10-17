@@ -8,7 +8,7 @@ Release:	6
 Summary:	Companion module for Readonly.pm, to speed up read-only scalar variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		http://search.cpan.org/dist/%{upstream_name}
+Url:		https://search.cpan.org/dist/%{upstream_name}
 Source0:    http://www.cpan.org/modules/by-module/Readonly/%{upstream_name}-%{upstream_version}.tar.gz
 
 Buildrequires:	perl-devel
