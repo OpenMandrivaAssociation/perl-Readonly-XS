@@ -2,14 +2,14 @@
 %define upstream_version 1.05
 
 Name:       perl-%{upstream_name}
-Version:    %perl_convert_version %{upstream_version}
-Release:	6
+Version:    %{upstream_version}
+Release:	7
 
 Summary:	Companion module for Readonly.pm, to speed up read-only scalar variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
-Url:		https://search.cpan.org/dist/%{upstream_name}
-Source0:    http://www.cpan.org/modules/by-module/Readonly/%{upstream_name}-%{upstream_version}.tar.gz
+Url:		https://metacpan.org/dist/Readonly-XS
+Source0:    https://cpan.metacpan.org/authors/id/R/RO/ROODE/Readonly-XS-%{upstream_version}.tar.gz
 
 BuildRequires:	make
 Buildrequires:	perl-devel
