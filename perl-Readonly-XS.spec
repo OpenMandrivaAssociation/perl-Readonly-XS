@@ -1,15 +1,13 @@
 %define	upstream_name	 Readonly-XS
-%define upstream_version 1.05
-
 Name:       perl-%{upstream_name}
-Version:    %{upstream_version}
-Release:	7
+Version:    1.05
+Release:	8
 
 Summary:	Companion module for Readonly.pm, to speed up read-only scalar variables
 License:	GPL+ or Artistic
 Group:		Development/Perl
 Url:		https://metacpan.org/dist/Readonly-XS
-Source0:    https://cpan.metacpan.org/authors/id/R/RO/ROODE/Readonly-XS-%{upstream_version}.tar.gz
+Source0:    https://cpan.metacpan.org/authors/id/R/RO/ROODE/Readonly-XS-%{version}.tar.gz
 
 BuildRequires:	make
 Buildrequires:	perl-devel
@@ -33,7 +31,7 @@ Readonly arrays and hashes are not sped up by this, since the SvREADONLY flag
 only works for scalars. Arrays and hashes always use the tie interface.
 
 %prep
-%setup -q -n %{upstream_name}-%{upstream_version}
+%setup -q -n %{upstream_name}-%{version}
 
 %build
 %{__perl} Makefile.PL INSTALLDIRS=vendor
@@ -69,9 +67,7 @@ rm -rf %{buildroot}
 
 * Wed Jul 29 2009 Jérôme Quelin <jquelin@mandriva.org> 1.50.0-1mdv2010.0
 + Revision: 404353
-- rebuild using %%perl_convert_version
-
-* Wed Feb 25 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.05-1mdv2009.1
+- rebuild using %1.05 Wed Feb 25 2009 Guillaume Rousse <guillomovitch@mandriva.org> 1.05-1mdv2009.1
 + Revision: 344647
 - new version
 
